@@ -1,0 +1,36 @@
+{
+  "tables": [
+    {
+      "id": "MSYFNgkkU",
+      "tableNumber": "1",
+      "tableStatus": "Busy",
+      "maxTablePeopleAmount": 8,
+      "tablePeopleAmount": 5,
+      "tableBill": 20
+    },
+    {
+      "id": "BltV_CYxD",
+      "tableNumber": "2",
+      "tableStatus": "Free",
+      "maxTablePeopleAmount": 4,
+      "tablePeopleAmount": 0,
+      "tableBill": 0
+    },
+    {
+      "id": "9I5kfhZ7-",
+      "tableNumber": "3",
+      "tableStatus": "Cleaning",
+      "maxTablePeopleAmount": 6,
+      "tablePeopleAmount": 0,
+      "tableBill": 0
+    },
+    {
+      "id": "Xk2kqmZah",
+      "tableNumber": "4",
+      "tableStatus": "Cleaning",
+      "maxTablePeopleAmount": 10,
+      "tablePeopleAmount": 0,
+      "tableBill": 0
+    }
+  ]
+}

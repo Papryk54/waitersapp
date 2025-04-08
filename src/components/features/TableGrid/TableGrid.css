@@ -1,0 +1,6 @@
+.custom-title{
+  margin-bottom: 0 !important;
+  /* Patryk płakał jak kodował */
+  display: flex;
+  align-items: center;
+}
