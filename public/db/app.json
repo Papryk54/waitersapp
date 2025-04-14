@@ -7,6 +7,14 @@
       "maxTablePeopleAmount": 1,
       "tablePeopleAmount": 0,
       "tableBill": 0
+    },
+    {
+      "id": "GSsVKpm3i",
+      "tableNumber": "1",
+      "tableStatus": "Free",
+      "maxTablePeopleAmount": 3,
+      "tablePeopleAmount": 0,
+      "tableBill": 0
     }
   ]
 }
