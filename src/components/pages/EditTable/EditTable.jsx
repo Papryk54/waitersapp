@@ -25,7 +25,7 @@ const EditTable = () => {
 	const updateStatus = (id, newStatus) => {
 		const updatedTable = { ...tableData, tableStatus: newStatus };
 
-		fetch(`${API_URL}/tables${id}`, {
+		fetch(`${API_URL}/tables/${id}`, {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json",
