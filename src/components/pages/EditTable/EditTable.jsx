@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../../config";
 
 const EditTable = () => {
 	const { id } = useParams();
@@ -10,7 +11,7 @@ const EditTable = () => {
 	const [tableData, setTableData] = useState(null);
 
 	useEffect(() => {
-		fetch(`http://localhost:3131/tables/${id}`)
+		fetch(`${API_URL}/tables${id}`)
 			.then((response) => response.json())
 			.then((data) => setTableData(data));
 	}, [id]);
@@ -24,7 +25,7 @@ const EditTable = () => {
 	const updateStatus = (id, newStatus) => {
 		const updatedTable = { ...tableData, tableStatus: newStatus };
 
-		fetch(`http://localhost:3131/tables/${id}`, {
+		fetch(`${API_URL}/tables${id}`, {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json",
@@ -88,7 +89,6 @@ const EditTable = () => {
 			setTableData({ ...tableData, tableBill: newValue });
 		}
 	};
-	
 
 	if (!tableData) return <p>Loading...</p>;
 
@@ -163,7 +163,12 @@ const EditTable = () => {
 					/>
 				</Form.Group>
 
-				<Button variant="primary" type="submit" className="mt-2" onClick={handleSubmit}>
+				<Button
+					variant="primary"
+					type="submit"
+					className="mt-2"
+					onClick={handleSubmit}
+				>
 					Update Table
 				</Button>
 			</Form>

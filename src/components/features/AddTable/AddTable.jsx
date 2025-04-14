@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import shortid from "shortid";
+import { API_URL } from "../../../config";
 
 const AddTable = () => {
 	const [tableData, setTableData] = useState({
@@ -31,7 +32,7 @@ const AddTable = () => {
 			tableBill: parseInt(tableData.tableBill),
 		};
 
-		fetch("http://localhost:3131/tables", {
+		fetch(`${API_URL}/tables`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(newTable),
@@ -79,18 +80,21 @@ const AddTable = () => {
 					<Form.Select
 						value={tableData.maxTablePeopleAmount}
 						onChange={(e) =>
-							setTableData({ ...tableData, maxTablePeopleAmount: e.target.value })
+							setTableData({
+								...tableData,
+								maxTablePeopleAmount: e.target.value,
+							})
 						}
 					>
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>
-                        <option value="5">5</option>
+						<option value="5">5</option>
 						<option value="6">6</option>
 						<option value="7">7</option>
 						<option value="8">8</option>
-                        <option value="9">9</option>
+						<option value="9">9</option>
 						<option value="10">10</option>
 					</Form.Select>
 				</Form.Group>

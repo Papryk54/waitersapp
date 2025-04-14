@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Card, Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./TableGrid.css";
+import { API_URL } from "../../../config";
 
 const TableGrid = () => {
 	const [tables, setTables] = useState([]);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch("http://localhost:3131/tables")
+		fetch(`${API_URL}/tables`)
 			.then((response) => response.json())
 			.then((data) => setTables(data));
 	}, []);
