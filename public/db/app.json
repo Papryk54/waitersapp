@@ -10,9 +10,17 @@
     },
     {
       "id": "GSsVKpm3i",
-      "tableNumber": "1",
+      "tableNumber": "2",
       "tableStatus": "Free",
       "maxTablePeopleAmount": 3,
+      "tablePeopleAmount": 0,
+      "tableBill": 0
+    },
+    {
+      "id": "z0YU6qib4",
+      "tableNumber": "1",
+      "tableStatus": "Free",
+      "maxTablePeopleAmount": 1,
       "tablePeopleAmount": 0,
       "tableBill": 0
     }
